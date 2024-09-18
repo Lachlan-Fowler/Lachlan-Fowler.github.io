@@ -1,0 +1,191 @@
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Body styling */
+body {
+    overflow-x: hidden;
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Navbar styling */
+.navbar {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    width: 200px;
+    cursor: pointer;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #000;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: width 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+/* Sticky navbar styling */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Banner styling */
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(Pulse.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px; /* Adjust based on the height of your navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Content styling */
+.content {
+    text-align: center;
+    color: #fff;
+    padding: 0;
+}
+
+.content h1 {
+    font-size: 70px;
+    margin: 0;
+    position: relative; /* Ensure position for typewriter effect */
+    display: inline-block;
+}
+
+.content p{
+    font-size: 20px;
+    margin: 0;
+    position: relative; /* Ensure position for typewriter effect */
+}
+
+/* Animation on page load */
+.animate-on-load {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Typewriter effect styling */
+.typewriter {
+    overflow: hidden; /* Ensures the text hides during animation */
+    border-right: .15em solid #fff; /* Cursor effect */
+    white-space: nowrap; /* Keeps text on a single line */
+    margin: 0 auto; /* Center alignment */
+    letter-spacing: .15em; /* Spacing between letters */
+    animation: typing 2.5s steps(40, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: #fff; } /* Cursor blink effect */
+}
+
+/* Paragraph styling */
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+/* Button styling */
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+button:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Page content styling */
+.page-content {
+    padding: 50px;
+    text-align: center;
+}
+
+.page-content h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.page-content p {
+    margin-bottom: 40px;
+}
