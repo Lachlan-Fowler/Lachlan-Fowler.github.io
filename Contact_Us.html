@@ -5,6 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Videre Tech</title>
     <link rel="stylesheet" href="contact.css">
+    <script>
+        // Function to save form data and append to an array in localStorage
+        function saveFormData() {
+            // Retrieve current data from localStorage
+            let allFormData = JSON.parse(localStorage.getItem('allFormData')) || [];
+
+            // Get form input values
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                timestamp: new Date().toISOString()  // Save timestamp
+            };
+
+            // Append new form data to the array
+            allFormData.push(formData);
+
+            // Save the updated array back to localStorage
+            localStorage.setItem('allFormData', JSON.stringify(allFormData));
+
+            console.log("Form data saved and appended to localStorage");
+        }
+
+        // Clear form data after submission
+        function clearFormData() {
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('subject').value = '';
+            document.getElementById('message').value = '';
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -20,7 +52,7 @@
     </header>
     
     <div class="contact-container">
-        <form action="send_email.php" method="post">
+        <form onsubmit="saveFormData(); clearFormData(); return false;">
             <h1>Contact Us</h1>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -35,10 +67,6 @@
             <textarea id="message" name="message" rows="6" required></textarea>
             
             <input type="submit" value="Send Message">
-            
-            <!-- Example for success/error messages -->
-            <!-- <div class="message success">Your message has been sent successfully!</div> -->
-            <!-- <div class="message error">There was an error sending your message. Please try again.</div> -->
         </form>
     </div>
 </body>
