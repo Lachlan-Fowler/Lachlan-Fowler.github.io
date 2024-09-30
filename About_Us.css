@@ -31,6 +31,7 @@ header {
     background-color: #fff;
     position: relative;
     z-index: 1000;
+    font-size: min(2vw, 20px);
 }
 
 .logo {
@@ -102,77 +103,16 @@ header {
 }
 
 .content h1 {
-    font-size: 70px;
+    font-size: 7vw;
     margin: 0;
     position: relative; /* Ensure position for typewriter effect */
     display: inline-block;
 }
 
 .content p{
-    font-size: 20px;
+    font-size: 2vw;
     margin: 0;
     position: relative; /* Ensure position for typewriter effect */
-}
-
-/* Animation on page load */
-.animate-on-load {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.animate {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Typewriter effect styling */
-.typewriter {
-    overflow: hidden; /* Ensures the text hides during animation */
-    border-right: .15em solid #fff; /* Cursor effect */
-    white-space: nowrap; /* Keeps text on a single line */
-    margin: 0 auto; /* Center alignment */
-    letter-spacing: .15em; /* Spacing between letters */
-    animation: typing 2.5s steps(40, end), blink 0.75s step-end infinite;
-}
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-@keyframes blink {
-    from, to { border-color: transparent }
-    50% { border-color: #fff; } /* Cursor blink effect */
-}
-
-/* Paragraph styling */
-.content p {
-    margin: 20px auto;
-    font-weight: 100;
-    line-height: 25px;
-}
-
-/* Button styling */
-button {
-    width: 200px;
-    padding: 15px 0;
-    text-align: center;
-    margin: 20px 10px;
-    border-radius: 25px;
-    font-weight: bold;
-    border: 2px solid #fff;
-    background: transparent;
-    color: #fff;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.4s ease;
-}
-
-button:hover {
-    background: #fff;
-    color: #000;
 }
 
 /* Page content styling */
