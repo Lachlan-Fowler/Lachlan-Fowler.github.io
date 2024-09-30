@@ -5,6 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Videre Tech</title>
     <link rel="stylesheet" href="Contact.css">
+    <script>
+        // Function to save form data and append to an array in localStorage
+        function saveFormData() {
+            // Retrieve current data from localStorage
+            let allFormData = JSON.parse(localStorage.getItem('allFormData')) || [];
+
+            // Get form input values
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                timestamp: new Date().toISOString()  // Save timestamp
+            };
+
+            // Append new form data to the array
+            allFormData.push(formData);
+
+            // Save the updated array back to localStorage
+            localStorage.setItem('allFormData', JSON.stringify(allFormData));
+
+            console.log("Form data saved and appended to localStorage");
+        }
+
+        // Clear form data after submission
+        function clearFormData() {
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('subject').value = '';
+            document.getElementById('message').value = '';
+        }
+    </script>
 </head>
 <body>
     <header>
