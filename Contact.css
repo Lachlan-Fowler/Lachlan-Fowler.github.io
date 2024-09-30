@@ -37,10 +37,11 @@ header {
     background-color: #fff;
     position: relative;
     z-index: 1000;
+    font-size: min(2vw, 20px);
 }
 
 .logo {
-    width: 200px;
+    width: 20vw;
     cursor: pointer;
 }
 
