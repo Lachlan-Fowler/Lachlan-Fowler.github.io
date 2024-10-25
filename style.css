@@ -15,7 +15,7 @@ body {
 header {
     width: 100%;
     background-color: #fff;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     z-index: 1000; /* Ensure it stays above other content */
@@ -24,18 +24,17 @@ header {
 /* Navbar styling */
 .navbar {
     width: 100%;
-    padding: 20px 0;
+    padding: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
+    justify-content: center;
+    background-color: #000;
     position: relative;
     z-index: 1000;
-    font-size: min(2vw, 20px);
 }
 
 .logo {
-    width: 20vw;
+    width: 200px;
     cursor: pointer;
 }
 
@@ -44,7 +43,6 @@ header {
     display: flex;
     margin: 0;
     padding: 0;
-
 }
 
 .navbar ul li {
@@ -76,44 +74,136 @@ header {
 
 /* Sticky navbar styling */
 .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
 }
 
 /* Banner styling */
 .banner {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(Pulse.jpg);
+    background-color: black;
     background-size: cover;
-    background-position: center;
-    padding-top: 80px; /* Adjust based on the height of your navbar */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-align: center; /* Center text within the banner */
 }
 
 /* Content styling */
 .content {
+    color: #fff; /* Ensure text is visible */
+    padding: 20px; /* Add padding for breathing room */
+}
+
+.offer-packages-section {
+    padding: 50px 20px; /* Added padding for better spacing */
+    background-color: #000; /* Apply background color to the section */
+}
+
+/* Offer Section */
+.offer-section {
     text-align: center;
+    padding: 20px 0;
+}
+
+.offer-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    gap: 100px; /* Adjust gap for spacing between items */
+}
+
+.offer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.offer-icon {
+    width: 80px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.offer-item h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: white
+}
+
+.offer-item p {
+    font-size: 16px;
+    color: #ddd;
+    padding: 0 10px;
+    line-height: 1.5;
+}
+
+/* Package Section */
+.packages {
+    display: flex; /* Use flexbox for horizontal alignment */
+    flex-direction: row; /* Stack the heading on top */
+    justify-content: center; /* Center the package columns */
+    margin-top: 200px; /* Adjust space above the packages */
+}
+
+.package {
+    margin: 0 100px; /* Add space between each package */
+    text-align: center; /* Center the text and icon */
+    max-width: 200px; /* Set a maximum width for packages */
+    margin-bottom: 500px;
+    
+}
+
+.package-icon {
+    width: 150px; /* Adjust size as needed */
+    height: auto; /* Keep aspect ratio */
+    margin-bottom: 10px; /* Space between icon and text */
+}
+
+/* Typewriter styling */
+.typewriter {
+    display: block; /* Ensure each line is a block element */
+    font-size: 70px; /* Adjust font size as needed */
+    margin: 0; /* Remove default margin */
+    position: relative; /* Position for typewriter effect */
+}
+
+/* Description styling */
+#description {
+    margin-top: 20px; /* Space between typewriter text and description */
+    font-size: 25px; /* Adjust font size as needed */
+    color: #fff; /* Ensure description is white */
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+/* Button styling */
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px auto; /* Center button */
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #fff;
+    background: transparent;
     color: #fff;
-    padding: 0;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
 }
 
-.content h1 {
-    font-size: 7vw;
-    margin: 0;
-    position: relative; /* Ensure position for typewriter effect */
-    display: inline-block;
-}
-
-.content p{
-    font-size: 2.5vh;
-    margin: 0;
-    position: relative; /* Ensure position for typewriter effect */
+button:hover {
+    background: #fff;
+    color: #000;
 }
 
 /* Animation on page load */
@@ -133,55 +223,16 @@ header {
     overflow: hidden; /* Ensures the text hides during animation */
     border-right: .15em solid #fff; /* Cursor effect */
     white-space: nowrap; /* Keeps text on a single line */
-    margin: 0 auto; /* Center alignment */
     letter-spacing: .15em; /* Spacing between letters */
     animation: typing 2.5s steps(40, end), blink 0.75s step-end infinite;
 }
 
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from { width: 0; }
+    to { width: 100%; }
 }
 
 @keyframes blink {
-    from, to { border-color: transparent }
-    50% { border-color: #fff; } /* Cursor blink effect */
-}
-
-/* Button styling */
-button {
-    width: 200px;
-    padding: 15px 0;
-    text-align: center;
-    margin: 20px 10px;
-    border-radius: 25px;
-    font-weight: bold;
-    border: 2px solid #fff;
-    background: transparent;
-    color: #fff;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.4s ease;
-}
-
-button:hover {
-    background: #fff;
-    color: #000;
-}
-
-/* Page content styling */
-.page-content {
-    padding: 50px;
-    text-align: center;
-}
-
-.page-content h1 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.page-content p {
-    margin-bottom: 40px;
-    font-size: 20px;
+    from, to { border-color: transparent; }
+    50% { border-color: #fff; /* Cursor blink effect */ }
 }
