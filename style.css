@@ -9,6 +9,14 @@
 /* Body styling */
 body {
     overflow-x: hidden;
+    background-color: #000;
+    color: white;
+}
+.section-title {
+    color: white; /* Set text color to white */
+    text-align: center; /* Center align the title */
+    font-size: 36px; /* Adjust font size as needed */
+    margin: 20px 0; /* Add margin for spacing */
 }
 
 /* Header styling */
@@ -95,77 +103,66 @@ header {
     padding: 20px; /* Add padding for breathing room */
 }
 
-.offer-packages-section {
-    padding: 50px 20px; /* Added padding for better spacing */
-    background-color: #000; /* Apply background color to the section */
-}
-
-/* Offer Section */
-.offer-section {
-    text-align: center;
-    padding: 20px 0;
-}
-
+/* Offer Section Styling */
 .offer-items {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: flex-start; /* Align items to the top */
-    gap: 100px; /* Adjust gap for spacing between items */
+    gap: 60px; /* Space between items */
+    margin-bottom: 200px;
 }
 
-.offer-item {
+/* Package Section Styling */
+.packages-section {
+    padding: 40px 20px; /* Padding for spacing */
+}
+
+.packages {
+    display: flex; /* Ensure packages are side by side */
+    justify-content: center; /* Center the packages */
+    gap: 60px; /* Space between package items */
+    margin-bottom: 200px;
+}
+
+/* Individual offer and package item styling */
+.offer-item, .package {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 300px;
-    padding: 20px;
+    width: 300px; /* Width of each item */
+    padding: 30px; /* Padding within each item */
     background-color: #222;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease; /* Add smooth scaling on hover */
 }
 
-.offer-icon {
-    width: 80px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 15px;
-    opacity: 0.9;
+.offer-item:hover, .package:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-.offer-item h3 {
-    font-size: 24px;
-    margin: 10px 0;
-    color: white
+/* Icon styling within offer and package items */
+.offer-icon, .package-icon {
+    width: 100px; /* Icon size */
+    height: auto;
+    margin-bottom: 20px;
 }
 
-.offer-item p {
-    font-size: 16px;
+/* Heading and text styling */
+.offer-item h3, .package h2 {
+    font-size: 28px; /* Increased font size */
+    color: white;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.offer-item p, .package p {
+    font-size: 18px; /* Larger text */
     color: #ddd;
+    text-align: center;
     padding: 0 10px;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
-/* Package Section */
-.packages {
-    display: flex; /* Use flexbox for horizontal alignment */
-    flex-direction: row; /* Stack the heading on top */
-    justify-content: center; /* Center the package columns */
-    margin-top: 200px; /* Adjust space above the packages */
-}
-
-.package {
-    margin: 0 100px; /* Add space between each package */
-    text-align: center; /* Center the text and icon */
-    max-width: 200px; /* Set a maximum width for packages */
-    margin-bottom: 500px;
-    
-}
-
-.package-icon {
-    width: 150px; /* Adjust size as needed */
-    height: auto; /* Keep aspect ratio */
-    margin-bottom: 10px; /* Space between icon and text */
-}
 
 /* Typewriter styling */
 .typewriter {
