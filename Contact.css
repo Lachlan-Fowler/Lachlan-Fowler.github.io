@@ -1,0 +1,216 @@
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Body styling */
+body {
+    overflow-x: hidden;
+    background-color: #000; /* Set the body background to black */
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Navbar styling */
+.navbar {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    width: 200px;
+    cursor: pointer;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #000;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: width 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+/* Sticky navbar styling */
+.sticky {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Banner styling */
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    background-size: cover;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-align: center; /* Center text within the banner */
+}
+
+/* Description styling */
+#description {
+    margin-top: 20px; /* Space between typewriter text and description */
+    font-size: 25px; /* Adjust font size as needed */
+    color: #fff; /* Ensure description is white */
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+/* Button styling */
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px auto; /* Center button */
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+button:hover {
+    background: #fff;
+    color: #000;
+}
+
+.content h1 {
+    font-size: 70px;
+    margin: 0;
+    position: relative; /* Ensure position for typewriter effect */
+    display: inline-block;
+}
+
+/* Container for the contact form */
+.contact-container {
+    max-width: 800px; /* Limit the width of the form */
+    width: 100%;
+    padding: 50px;
+    background: #fff; /* Set background color to black */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 50px auto; /* Center the form and add space above and below */
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: black; /* Change text color to white for contrast */
+}
+
+form label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: black; /* Change text color to white for contrast */
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333; /* Text color for inputs */
+}
+
+form input[type="submit"] {
+    width: auto;
+    background: #000; /* Set background to white */
+    color: #fff; /* Text color for contrast */
+    border: none;
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 25px;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background: #555; /* Darker shade on hover */
+}
+
+/* Error and success messages */
+.message {
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.message.success {
+    background: #4caf50;
+}
+
+.message.error {
+    background: #f44336;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    form {
+        padding: 10px;
+    }
+    
+    form input, form textarea {
+        font-size: 14px;
+    }
+    
+    form input[type="submit"] {
+        font-size: 16px;
+    }
+}
