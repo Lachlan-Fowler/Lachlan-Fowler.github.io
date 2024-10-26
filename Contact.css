@@ -201,7 +201,7 @@ form input[type="submit"]:hover {
 }
 
 /* Responsive design for smaller screens */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     form {
         padding: 10px;
     }
@@ -212,5 +212,9 @@ form input[type="submit"]:hover {
     
     form input[type="submit"] {
         font-size: 16px;
+    }
+    
+    .logo {
+        width: 150px; /* Adjusted logo size for mobile */
     }
 }
