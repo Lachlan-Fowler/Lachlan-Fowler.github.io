@@ -233,3 +233,69 @@ button:hover {
     from, to { border-color: transparent; }
     50% { border-color: #fff; /* Cursor blink effect */ }
 }
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 24px; /* Smaller font size for mobile */
+        margin: 15px 0; /* Adjust margin */
+    }
+
+    .logo {
+        width: 150px; /* Adjusted logo size for mobile */
+    }
+
+    .navbar ul li {
+        margin: 0 10px; /* Reduced margin for mobile */
+    }
+
+    .banner {
+        height: 60vh; /* Reduced height for mobile */
+    }
+
+    .content {
+        padding: 15px; /* Smaller padding */
+    }
+
+    .offer-items {
+        flex-direction: column; /* Stack items on mobile */
+        gap: 30px; /* Reduced gap */
+        margin-bottom: 100px; /* Reduced margin */
+    }
+
+    .packages {
+        flex-direction: column; /* Stack packages on mobile */
+        gap: 30px; /* Reduced gap */
+        margin-bottom: 100px; /* Reduced margin */
+    }
+
+    .offer-item, .package {
+        width: 90%; /* Full width on mobile */
+        padding: 20px; /* Smaller padding */
+    }
+
+    .offer-icon, .package-icon {
+        width: 60px; /* Smaller icon size for mobile */
+    }
+
+    .offer-item h3, .package h2 {
+        font-size: 20px; /* Smaller heading size */
+    }
+
+    .offer-item p, .package p {
+        font-size: 14px; /* Smaller paragraph size */
+    }
+
+    .typewriter {
+        font-size: 40px; /* Smaller font size for mobile */
+    }
+
+    #description {
+        font-size: 18px; /* Smaller description font size */
+    }
+
+    button {
+        width: 100%; /* Full-width button on mobile */
+        padding: 10px; /* Smaller padding */
+    }
+}
