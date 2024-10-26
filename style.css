@@ -249,8 +249,16 @@ button:hover {
         margin: 0 10px; /* Reduced margin for mobile */
     }
 
-    .banner {
-        height: 60vh; /* Reduced height for mobile */
+    .banner h1 {
+        font-size: 25px; /* Smaller font size for the main banner text */
+    }
+    
+    .banner h2 {
+        font-size: 25px; /* Smaller font size for the main banner text */
+    }
+
+    .banner p {
+        font-size: 16px; /* Smaller font size for the banner paragraph */
     }
 
     .content {
@@ -259,12 +267,16 @@ button:hover {
 
     .offer-items {
         flex-direction: column; /* Stack items on mobile */
+        justify-content: center; /* Center items */
+        align-items: center; /* Align items vertically */
         gap: 30px; /* Reduced gap */
         margin-bottom: 100px; /* Reduced margin */
     }
 
     .packages {
         flex-direction: column; /* Stack packages on mobile */
+        justify-content: center; /* Center packages */
+        align-items: center; /* Align packages vertically */
         gap: 30px; /* Reduced gap */
         margin-bottom: 100px; /* Reduced margin */
     }
@@ -295,7 +307,12 @@ button:hover {
     }
 
     button {
-        width: 100%; /* Full-width button on mobile */
+        width: 50%; /* Full-width button on mobile */
         padding: 10px; /* Smaller padding */
+    }
+
+    /* Adjust main heading for mobile */
+    .main-heading {
+        font-size: 28px; /* Smaller main heading size */
     }
 }
