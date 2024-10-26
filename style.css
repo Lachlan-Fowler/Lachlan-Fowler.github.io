@@ -12,10 +12,11 @@ body {
     background-color: #000;
     color: white;
 }
+
 .section-title {
     color: white; /* Set text color to white */
     text-align: center; /* Center align the title */
-    font-size: 36px; /* Adjust font size as needed */
+    font-size: 30px; /* Increased font size */
     margin: 20px 0; /* Add margin for spacing */
 }
 
@@ -42,7 +43,7 @@ header {
 }
 
 .logo {
-    width: 200px;
+    width: 180px; /* Adjusted logo size */
     cursor: pointer;
 }
 
@@ -54,7 +55,7 @@ header {
 }
 
 .navbar ul li {
-    margin: 0 20px;
+    margin: 0 20px; /* Adjusted margin */
     position: relative;
 }
 
@@ -67,12 +68,12 @@ header {
 
 .navbar ul li::after {
     content: '';
-    height: 3px;
+    height: 3px; /* Adjusted height */
     width: 0;
     background: #000;
     position: absolute;
     left: 0;
-    bottom: -10px;
+    bottom: -10px; /* Adjusted bottom spacing */
     transition: width 0.5s;
 }
 
@@ -88,7 +89,7 @@ header {
 /* Banner styling */
 .banner {
     width: 100%;
-    height: 100vh;
+    height: 80vh; /* Adjusted height */
     background-color: black;
     background-size: cover;
     display: flex;
@@ -100,27 +101,27 @@ header {
 /* Content styling */
 .content {
     color: #fff; /* Ensure text is visible */
-    padding: 20px; /* Add padding for breathing room */
+    padding: 25px; /* Adjusted padding */
 }
 
 /* Offer Section Styling */
 .offer-items {
     display: flex;
     justify-content: center;
-    gap: 60px; /* Space between items */
-    margin-bottom: 200px;
+    gap: 60px; /* Adjusted space between items */
+    margin-bottom: 200px; /* Adjusted bottom margin */
 }
 
 /* Package Section Styling */
 .packages-section {
-    padding: 40px 20px; /* Padding for spacing */
+    padding: 40px 20px; /* Adjusted padding */
 }
 
 .packages {
     display: flex; /* Ensure packages are side by side */
     justify-content: center; /* Center the packages */
-    gap: 60px; /* Space between package items */
-    margin-bottom: 200px;
+    gap: 60px; /* Adjusted space between package items */
+    margin-bottom: 200px; /* Adjusted bottom margin */
 }
 
 /* Individual offer and package item styling */
@@ -128,8 +129,8 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 300px; /* Width of each item */
-    padding: 30px; /* Padding within each item */
+    width: 300px; /* Adjusted width */
+    padding: 30px; /* Adjusted padding within each item */
     background-color: #222;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -142,54 +143,53 @@ header {
 
 /* Icon styling within offer and package items */
 .offer-icon, .package-icon {
-    width: 100px; /* Icon size */
+    width: 90px; /* Adjusted icon size */
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Adjusted margin */
 }
 
 /* Heading and text styling */
 .offer-item h3, .package h2 {
-    font-size: 28px; /* Increased font size */
+    font-size: 24px; /* Increased font size */
     color: white;
-    margin: 15px 0;
+    margin: 15px 0; /* Adjusted margin */
     text-align: center;
 }
 
 .offer-item p, .package p {
-    font-size: 18px; /* Larger text */
+    font-size: 16px; /* Increased text size */
     color: #ddd;
     text-align: center;
-    padding: 0 10px;
+    padding: 0 10px; /* Adjusted padding */
     line-height: 1.6;
 }
-
 
 /* Typewriter styling */
 .typewriter {
     display: block; /* Ensure each line is a block element */
-    font-size: 70px; /* Adjust font size as needed */
+    font-size: 60px; /* Adjusted font size */
     margin: 0; /* Remove default margin */
     position: relative; /* Position for typewriter effect */
 }
 
 /* Description styling */
 #description {
-    margin-top: 20px; /* Space between typewriter text and description */
-    font-size: 25px; /* Adjust font size as needed */
+    margin-top: 20px; /* Adjusted top margin */
+    font-size: 22px; /* Adjusted font size */
     color: #fff; /* Ensure description is white */
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-bottom: 10px; /* Adjusted bottom padding */
+    padding-top: 10px; /* Adjusted top padding */
 }
 
 /* Button styling */
 button {
-    width: 200px;
-    padding: 15px 0;
+    width: 200px; /* Adjusted button width */
+    padding: 15px 0; /* Adjusted padding */
     text-align: center;
     margin: 20px auto; /* Center button */
-    border-radius: 25px;
+    border-radius: 25px; /* Adjusted border radius */
     font-weight: bold;
-    border: 2px solid #fff;
+    border: 2px solid #fff; /* Adjusted border size */
     background: transparent;
     color: #fff;
     cursor: pointer;
@@ -206,7 +206,7 @@ button:hover {
 /* Animation on page load */
 .animate-on-load {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px); /* Adjusted translation */
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
